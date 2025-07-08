@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Custom Business Card Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>💼 Create Your Digital Business Card</h1>
+
+    <div class="form">
+      <input type="text" id="nameInput" placeholder="Full Name" />
+      <input type="text" id="roleInput" placeholder="Role" />
+      <input type="email" id="emailInput" placeholder="Email" />
+      <input type="url" id="linkedinInput" placeholder="LinkedIn URL" />
+      <input type="url" id="githubInput" placeholder="GitHub URL" />
+      <button onclick="generateCard()">Generate Card</button>
+    </div>
+
+    <div class="card" id="card" style="display: none;">
+      <h2 id="name"></h2>
+      <p id="role"></p>
+      <p>
+        Email: <a id="email" href="#" target="_blank"></a>
+        <button onclick="copyEmail()">📋 Copy</button>
+      </p>
+      <p><a id="linkedin" href="#" target="_blank">LinkedIn</a></p>
+      <p><a id="github" href="#" target="_blank">GitHub</a></p>
+      <button onclick="downloadCard()">📥 Download Card</button>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+
+  <footer>
+  <p>Made by <a href="https://github.com/Rajdeepry" target="_blank"> Rajdeep Choudhury</a></p>
+</footer>
+</body>
+
+</html>
